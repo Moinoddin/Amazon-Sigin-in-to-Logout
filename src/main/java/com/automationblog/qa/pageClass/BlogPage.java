@@ -31,19 +31,12 @@ public class BlogPage
 	@FindBy(className="wikipedia-search-button")
 	WebElement WikipediaButton;
 	
- /*	public void WekipediaSearch(String str)
-	{
-		Wekipedia.sendKeys(str);
-	}
 	
-	public void WekipediaButton()
-	{
-		WikipediaButton.click();
-	}
+	@FindBy(xpath="//button[contains(text(),'Click Me')]")
+	WebElement linktext;
 	
-*/
-	
-	
+
+		
 	public WebElement WekipediaSearch()
 	{
 		return Wekipedia;
@@ -52,7 +45,13 @@ public class BlogPage
 	public WebElement WekipediaButton()
 	{
 		return WikipediaButton;
+		
 	}
 	
+	public void alertTest()
+	{
+	      linktext.click();
+	      driver.switchTo().alert().accept();
+	}
 
 }

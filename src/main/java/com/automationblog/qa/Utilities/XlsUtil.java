@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
@@ -12,7 +13,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class XlsUtil {
 	
-	public static FileInputStream fi;
+	public static InputStream fi;
 	public static FileOutputStream fo;
 	public static XSSFWorkbook wb;
 	public static XSSFSheet ws;

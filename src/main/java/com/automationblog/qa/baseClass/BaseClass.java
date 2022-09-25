@@ -13,12 +13,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.automationblog.qa.Utilities.ConfigProp;
+import com.beust.jcommander.Parameter;
 //import org.testng.log4testng.Logger;
 
 public class BaseClass {
+	
 	
 	public WebDriver driver;
 	public Properties prop;
@@ -27,10 +31,14 @@ public class BaseClass {
 	public File file;
 	public ConfigProp configprop;
 	
+	
 	@BeforeMethod
-	public void setup() throws IOException  
+	@Parameters("browser")
+	public void setup(@Optional("chrome")String browser) throws IOException, Exception  
 	{
-		
+	
+	if(browser.equals("chrome"))
+	{
 	configprop = new ConfigProp();	
 	logger = Logger.getLogger("BlogProject");
 	//PropertyConfigurator.configure("Log4j.properties");
@@ -41,9 +49,10 @@ public class BaseClass {
 	//	logger.info("System has Set Chrome Webdriver Path Successfully ");
 		
 	//******** Created ConnfigProperties class to fetch method of properties file path********//
+		
+	
+
 		System.setProperty("webdriver.chrome.driver",configprop.chromeDriver());
-		
-		
 		driver = new ChromeDriver();
 		logger.info("Chrome Driver Object Created Here Chrome Browser Will launch");
 		
@@ -67,15 +76,16 @@ public class BaseClass {
 		driver.get(configprop.getURL());
 		logger.info("getting a URL from Properties File");
 		
+	}	
 	//	Thread.sleep(3000);
 
 	}
 	
 	
 	@AfterMethod
-	public void tearup() 
+	public void tearup() throws InterruptedException 
 	{
-		
+		Thread.sleep(5000);
 		driver.quit();
 		logger.info("Browser is closed");
 	}

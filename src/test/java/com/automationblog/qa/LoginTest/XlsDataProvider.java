@@ -14,46 +14,47 @@ public class XlsDataProvider extends BaseClass {
 	
 
 	
-	@Test
-	public void dataproviders() throws IOException 
+	@Test(dataProvider="getData")
+	
+	public void dataproviders(String st, String se) throws IOException 
 	{
 		BlogPage Bp = new BlogPage(driver);
 		XlsDataProvider xl = new  XlsDataProvider();
 		String str[][];
 		 
-		Bp.WekipediaSearch().sendKeys(configprop.search());
+		Bp.WekipediaSearch().sendKeys(st);
 		Bp.WekipediaButton();
 		
-		str = xl.getData();
-		System.out.println(str);
+	//	str = xl.getData();
+	//	System.out.println(str);
 		
 	}
 	
 	
 	
 	
-	@DataProvider(name="logindata")
+	@DataProvider()
 	public String[][] getData() throws IOException
 	{
 		ConfigProp cp = new ConfigProp();
 		String path = cp.XlsPath();
 	
-		
+		String x=""  ;
 				
 		int rownum = XlsUtil.getRowCount(path, "sheet1");
 		int colcount = XlsUtil.getCellCount(path, "Sheet1", 0);
 		
 		
-		String loginData[][] =new String[rownum][colcount];
+		String[][] loginData =new String[rownum][colcount];
 		
 		for(int i=1; i<=rownum; i++)
 		{
 			for(int j=0; j<colcount; j++)
 			{
 										
-				loginData[i-1][j] = XlsUtil.getCellData(path,"Sheet1", i, j);
+				loginData[i-1][j] =	 XlsUtil.getCellData(path,"Sheet1", i, j);
 				
-				System.out.println(loginData[i-1][j]);
+				//System.out.println(loginData[i-1][j]);
 			}
 		}
 		
