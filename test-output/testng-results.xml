@@ -2,34 +2,16 @@
 <testng-results total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-10-14T03:45:49Z" name="Default suite" finished-at="2022-10-14T03:46:29Z" duration-ms="40460">
+  <suite started-at="2022-10-17T04:07:59Z" name="Default suite" finished-at="2022-10-17T04:10:58Z" duration-ms="179334">
     <groups>
-      <group name="smoke">
-        <method signature="JsExecutor.jsTest()[pri:0, instance:com.automationblog.qa.LoginTest.JsExecutor@1474f18]" name="jsTest" class="com.automationblog.qa.LoginTest.JsExecutor"/>
-      </group> <!-- smoke -->
     </groups>
-    <test started-at="2022-10-14T03:45:49Z" name="Default test" finished-at="2022-10-14T03:46:29Z" duration-ms="40460">
-      <class name="com.automationblog.qa.LoginTest.JsExecutor">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.automationblog.qa.LoginTest.JsExecutor@1474f18]" started-at="2022-10-14T09:15:49Z" name="setup" finished-at="2022-10-14T09:16:04Z" duration-ms="14805" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
+    <test started-at="2022-10-17T04:07:59Z" name="Default test" finished-at="2022-10-17T04:10:58Z" duration-ms="179334">
+      <class name="com.automationblog.qa.LoginTest.AmazonSystemTest">
+        <test-method signature="amazonSystemTest()[pri:0, instance:com.automationblog.qa.LoginTest.AmazonSystemTest@1141def]" started-at="2022-10-17T09:37:59Z" name="amazonSystemTest" finished-at="2022-10-17T09:40:58Z" duration-ms="179300" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="jsTest()[pri:0, instance:com.automationblog.qa.LoginTest.JsExecutor@1474f18]" started-at="2022-10-14T09:16:04Z" name="jsTest" finished-at="2022-10-14T09:16:23Z" duration-ms="19600" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- jsTest -->
-        <test-method is-config="true" signature="tearup()[pri:0, instance:com.automationblog.qa.LoginTest.JsExecutor@1474f18]" started-at="2022-10-14T09:16:23Z" name="tearup" finished-at="2022-10-14T09:16:29Z" duration-ms="6013" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearup -->
-      </class> <!-- com.automationblog.qa.LoginTest.JsExecutor -->
+        </test-method> <!-- amazonSystemTest -->
+      </class> <!-- com.automationblog.qa.LoginTest.AmazonSystemTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

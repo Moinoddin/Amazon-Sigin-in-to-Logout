@@ -57,8 +57,8 @@ public class AmazonSystemTest {
       driver.findElement(By.xpath("//div[@id='address-book-entry-0']/div[2]/span")).click();
       
  
-//      Thread.sleep(3000);
-//      driver.quit();
+      Thread.sleep(3000);
+      driver.quit();
 
   }
 }
