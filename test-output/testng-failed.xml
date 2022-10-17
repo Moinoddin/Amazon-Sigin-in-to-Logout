@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.automationblog.qa.LoginTest.DataPassingTestNG">
+      <class name="com.automationblog.qa.LoginTest.JsExecutor">
         <methods>
-          <include name="f"/>
+          <include name="setup"/>
+          <include name="jsTest"/>
+          <include name="tearup"/>
         </methods>
-      </class> <!-- com.automationblog.qa.LoginTest.DataPassingTestNG -->
+      </class> <!-- com.automationblog.qa.LoginTest.JsExecutor -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

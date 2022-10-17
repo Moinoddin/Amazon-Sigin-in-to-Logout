@@ -13,7 +13,7 @@ public class TestBlogPage extends BaseClass
 	
 	
 	
-	@Test
+	@Test(groups = {"smoke"})
 	public void BlogPageTest() throws InterruptedException 
 	
 	{

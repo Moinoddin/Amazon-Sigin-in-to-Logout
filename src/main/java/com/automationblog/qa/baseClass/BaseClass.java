@@ -2,24 +2,18 @@ package com.automationblog.qa.baseClass;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.Reader;
 import java.util.Properties;
 
-import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.logging.Logs;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
 
 import com.automationblog.qa.Utilities.ConfigProp;
-import com.beust.jcommander.Parameter;
-//import org.testng.log4testng.Logger;
 
 public class BaseClass {
 	
@@ -27,7 +21,7 @@ public class BaseClass {
 	public WebDriver driver;
 	public Properties prop;
 	public FileInputStream fileinput;
-	public Logger logger;
+	public Logs logger;
 	public File file;
 	public ConfigProp configprop;
 	
@@ -40,7 +34,6 @@ public class BaseClass {
 	if(browser.equals("chrome"))
 	{
 	configprop = new ConfigProp();	
-	logger = Logger.getLogger("BlogProject");
 	//PropertyConfigurator.configure("Log4j.properties");
 		
 	
@@ -53,8 +46,9 @@ public class BaseClass {
 	
 
 		System.setProperty("webdriver.chrome.driver",configprop.chromeDriver());
+		
 		driver = new ChromeDriver();
-		logger.info("Chrome Driver Object Created Here Chrome Browser Will launch");
+	//	logger.info("Chrome Driver Object Created Here Chrome Browser Will launch");
 		
 	//******** Directly accessing the path of Properties File ***********//	
 	//	file = new File("./src/main/java/com/automationblog/qa/Properties/Variable.properties");
@@ -74,8 +68,8 @@ public class BaseClass {
 	//	logger.info("loaded Fileinput object to Read Properties File");
 		
 		driver.get(configprop.getURL());
-		logger.info("getting a URL from Properties File");
-		
+//		logger.info("getting a URL from Properties File");
+//		
 	}	
 	//	Thread.sleep(3000);
 
@@ -87,7 +81,7 @@ public class BaseClass {
 	{
 		Thread.sleep(5000);
 		driver.quit();
-		logger.info("Browser is closed");
+	//	logger.info("Browser is closed");
 	}
 	
 	

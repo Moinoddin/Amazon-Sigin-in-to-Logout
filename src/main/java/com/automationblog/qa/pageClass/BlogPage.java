@@ -35,6 +35,7 @@ public class BlogPage
 	@FindBy(xpath="//button[contains(text(),'Click Me')]")
 	WebElement linktext;
 	
+	
 
 		
 	public WebElement WekipediaSearch()
