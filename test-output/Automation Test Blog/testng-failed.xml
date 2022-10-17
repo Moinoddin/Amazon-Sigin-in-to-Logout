@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Automation Test Blog]" guice-stage="DEVELOPMENT">
+  <parameter name="browser" value="chrome"/>
+  <test name="BlogProject Test(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.automationblog.qa.LoginTest.JsExecutor">
+        <methods>
+          <include name="setup"/>
+          <include name="jsTest"/>
+          <include name="tearup"/>
+        </methods>
+      </class> <!-- com.automationblog.qa.LoginTest.JsExecutor -->
+    </classes>
+  </test> <!-- BlogProject Test(failed) -->
+</suite> <!-- Failed suite [Automation Test Blog] -->

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [BlogProject by groups]" guice-stage="DEVELOPMENT">
+  <test name="GRP-javaScript1(failed)">
+    <groups>
+      <run>
+        <include name="javaScript1"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.automationblog.qa.LoginTest.JsExecutor">
+        <methods>
+          <include name="jsTest"/>
+        </methods>
+      </class> <!-- com.automationblog.qa.LoginTest.JsExecutor -->
+    </classes>
+  </test> <!-- GRP-javaScript1(failed) -->
+</suite> <!-- Failed suite [BlogProject by groups] -->

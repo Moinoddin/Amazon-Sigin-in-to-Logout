@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Automation Test Blog">
+
+
+	<test name="Test1">
+		<parameter name="browser" value="chrome"></parameter>
+		<groups>
+			<define name="dailyBuild">
+
+				<include name="Regresstion" />
+
+			</define>
+			<run>
+
+				<include name="dailyBuild"></include>
+			</run>
+		</groups>
+
+
+		<classes>
+			<class name="com.automationblog.qa.LoginTest.GroupsTest" />
+			<class name="com.automationblog.qa.LoginTest.MetaGroup" />
+			<!-- <class name="com.automationblog.qa.LoginTest.JsExecutor"/> -->
+			<!-- <class name="com.automationblog.qa.LoginTest.TestBlogPage"/> -->
+			<!-- <class name="com.automationblog.qa.LoginTest.XlsDataProvider"/> -->
+		</classes>
+	</test> <!-- Test -->
+
+
+</suite> <!-- Suite -->

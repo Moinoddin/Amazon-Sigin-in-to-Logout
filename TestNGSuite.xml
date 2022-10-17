@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SuiteLevelTest" parallel ="tests" thread-count ="2">
+	
+	<groups>
+	
+		<run>
+			<include name="smoke"></include>
+		
+		</run>
+	</groups>
+	<test name="Test1">
+	<groups>
+		<run>
+			<include name="sanity"></include>
+		
+		</run>
+	</groups>
+	
+		<classes>
+	
+			<class name="com.automationblog.qa.LoginTest.GroupsTest"/>
+			<class name="com.automationblog.qa.LoginTest.JsExecutor"/>
+	
+	
+		</classes>
+	</test>
+	<test name="Test2">
+	<groups>
+		<run>
+			<include name="sanity"></include>
+		
+		</run>
+	</groups>
+		<classes>
+		
+			<class name="com.automationblog.qa.LoginTest.MetaGroup"/>	
+			<class name="com.automationblog.qa.LoginTest.TestBlogPage"/>
+		</classes>
+	</test>
+
+</suite>
