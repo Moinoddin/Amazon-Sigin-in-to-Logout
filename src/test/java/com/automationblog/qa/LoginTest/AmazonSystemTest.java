@@ -3,6 +3,7 @@ package com.automationblog.qa.LoginTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.WindowType;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
@@ -23,7 +24,7 @@ public class AmazonSystemTest {
       driver.findElement(By.cssSelector("input#ap_password")).sendKeys("M@in0513");
       driver.findElement(By.cssSelector("input#signInSubmit")).click();
       
-      Thread.sleep(20000);
+      Thread.sleep(30000);
       
       driver.findElement(By.cssSelector("input#auth-signin-button")).click();
      
@@ -32,9 +33,11 @@ public class AmazonSystemTest {
       
       driver.findElement(By.cssSelector("input#nav-search-submit-button")).click();
       
-      driver.findElement(By.xpath("//img[@src='https://m.media-amazon.com/images/I/81H6ubv3xLL._AC_UL320_.jpg']")).click();
+      driver.findElement(By.xpath("//img[@alt='Sponsored Ad - Woodland mens Ogd 4003121 Sandal']")).click();
       Thread.sleep(2000);
       
+      
+     
       String originalWindow = driver.getWindowHandle();
       
       for (String windowHandle : driver.getWindowHandles()) 
@@ -45,12 +48,13 @@ public class AmazonSystemTest {
    	    }
    	}
       
+      
       Thread.sleep(3000);
     //  driver.switchTo().window(originalWindow);
       
     //  driver.switchTo().window()
       
-      driver.findElement(By.cssSelector("input#add-to-cart-button")).submit();
+      driver.findElement(By.cssSelector("input#add-to-cart-button")).click();
       
       driver.findElement(By.name("proceedToRetailCheckout")).click();
       
