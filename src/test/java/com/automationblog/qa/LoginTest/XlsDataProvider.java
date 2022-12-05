@@ -42,7 +42,7 @@ public class XlsDataProvider extends BaseClass {
 		String x=""  ;
 				
 		int rownum = XlsUtil.getRowCount(path, "sheet1");
-		int colcount = XlsUtil.getCellCount(path, "Sheet1", 0);
+		int colcount = XlsUtil.getCellCount(path, "sheet1", 0);
 		
 		
 		String[][] loginData =new String[rownum][colcount];

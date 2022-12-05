@@ -1,13 +1,32 @@
 package com.automationblog.qa.LoginTest;
 
+import java.time.Duration;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-@Test(groups = {"all"})
+
+import com.automationblog.qa.Utilities.ItestLinstner;
+import com.automationblog.qa.Utilities.RetryAnalyzer;
+
+@Listeners(ItestLinstner.class)
 public class MetaGroup {
 
+	WebDriver driver;
 	
-	@Test(groups = {"smoke"})
+	@Test(invocationCount = 8)
+	public void Test19()
+	{
+		System.out.println("Test 19"+ Thread.currentThread().getId());
+	}
+	
+	@Test(retryAnalyzer = RetryAnalyzer.class)
 	public void Test11()
 	{
+		
+		Assert.assertTrue(true);
 		System.out.println("MestGroup-Test11"+"  "+ Thread.currentThread().getId());
 	}
 	

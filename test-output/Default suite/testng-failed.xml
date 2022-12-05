@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.automationblog.qa.LoginTest.AmazonSystemTest">
+      <class name="com.automationblog.qa.LoginTest.XlsDataProvider">
         <methods>
-          <include name="amazonSystemTest"/>
+          <include name="dataproviders"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- com.automationblog.qa.LoginTest.AmazonSystemTest -->
+      </class> <!-- com.automationblog.qa.LoginTest.XlsDataProvider -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
